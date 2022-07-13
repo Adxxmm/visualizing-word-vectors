@@ -10,10 +10,10 @@ First, ``git clone`` this repository into a directory on your computer.
 ### Creating a 3D Chart
 
 ## Generating 3D or 2D vectors from the Semantle corpus
-The [MDVectors](static\unreduced_vectors\MDVectors.json) file contains a large amount (25,000) of words and vectors that are similar to the words in the Semantle corpus. **No additional action is required if you want to generate charts based on the Semantle words.**
+The [MDVectors](static/unreduced_vectors/MDVectors.json) file contains a large amount (25,000) of words and vectors that are similar to the words in the Semantle corpus. **No additional action is required if you want to generate charts based on the Semantle words.**
 
 ## Generating 3D or 2D vectors from an [nltk corpus](https://www.nltk.org/api/nltk.corpus.html)
-> **Note**: You can avoid this entire section if you wish to use the [Semantle](https://semantle.com/) corpus. The [2D Vector](static\corpora\2DVectors.json) and [3D Vector](static\corpora\3DVectors.json) files are both made up of a corpus similar to the Semantle corpus.
+> **Note**: You can avoid this entire section if you wish to use the [Semantle](https://semantle.com/) corpus. The [2D Vector](static/corpora/2DVectors.json) and [3D Vector](static/corpora/3DVectors.json) files are both made up of a corpus similar to the Semantle corpus.
 
 A commonly used corpus is called the [brown corpus](http://korpus.uib.no/icame/brown/bcm.html). We will use the brown corpus in this example.
 
@@ -32,7 +32,7 @@ NewModel.GenerateVectorsFile(Path)
 
 ## Understanding the system
 ### Data
-Word vectors are stored in a ``.json`` file such as the provided [3D vectors](static\corpora\3DVectors.json) file. Each json contains a word as a key, and the dimensions as values.
+Word vectors are stored in a ``.json`` file such as the provided [3D vectors](static/corpora/3DVectors.json) file. Each json contains a word as a key, and the dimensions as values.
 
 ```json
 {
@@ -125,7 +125,7 @@ The plotly chart object.
     </script>
 </footer>
 ```
-![Function example](static\images\plot_1.png)
+![Function example](static/images/plot_1.png)
 
 #### RenderClosestWordsToVector
 ```js
