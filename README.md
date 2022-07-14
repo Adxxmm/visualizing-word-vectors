@@ -1,13 +1,14 @@
 # visualizing-word-vectors
+> **Warning**: This version of the software does not fully support 2D and it may not be stable.
+
 Systems that can visualize word embedding vectors in 3D and 2D spaces.
 
 ## Installation
-First, ``git clone`` this repository into a directory on your computer.
-
-## Choosing 3D or 2D
-3D and 2D can be represented in a chart. Enabling this requires the use of simple Javascript.
-
-### Creating a 3D Chart
+First, ``git clone`` this repository into a directory on your computer. Then, run [server.py](/server.py).
+```
+Running on http://xxx.xxx.xxx.xxx:8080/ (Press CTRL+C to quit)
+```
+When you see something like this, go to that URL and you will be redirected to the contents of your [index.html](/templates/index.html) file.
 
 ## Generating 3D or 2D vectors from the Semantle corpus
 The [MDVectors](static/unreduced_vectors/MDVectors.json) file contains a large amount (25,000) of words and vectors that are similar to the words in the Semantle corpus. **No additional action is required if you want to generate charts based on the Semantle words.**
@@ -86,7 +87,7 @@ Visualization = new VisualizeJs("2D", '/static/corpora/3DVectors.json');
 ```js
 Visualization.RenderAll();
 ```
-> Note: If you are using a large corpus, Plotly struggles with adding the word text as a label to each point. It may take a long time to load or hang forever. Use the ``.RenderSome()`` function to render a select number of words near a specific point.
+> **Note**: If you are using a large corpus, Plotly struggles with adding the word text as a label to each point. It may take a long time to load or hang forever. Use the ``.RenderSome()`` function to render a select number of words near a specific point.
 ##### Arguments:
 None
 ##### Returns:
