@@ -151,3 +151,31 @@ The plotly chart object.
     </script>
 </footer>
 ```
+
+#### RenderWords
+```js
+Visualization.RenderWords();
+```
+> Similar to ``.RenderClosestWords()`` but instead of inputting a word, you can input specific coordinates.
+##### Arguments:
+- ``float`` ``required``: X position
+- ``float`` ``required``: Y position
+- ``float`` ``optional``: Z position (will be ignored if visualization is set to "2D" mode)
+- ``float`` ``required``: The view distance (the size of the radius or square that words are included in)
+##### Returns:
+The plotly chart object.
+##### Examples:
+```html
+<body>
+    <div id="chart"></div>
+</body>
+<footer>
+    <script>
+        Visualization = new VisualizeJs("3D", '/static/corpora/3DVectors.json', "chart");
+        Visualization.RenderClosestWordsToVector(27, 48.5, 39.2, 5);
+    </script>
+</footer>
+```
+
+### Custom Datatypes
+#### Words and Wordlists
